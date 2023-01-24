@@ -1,0 +1,159 @@
+* {
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.toolbox-cont{
+    height: 5rem;
+    /* width:  */
+    background-color: #636e72;
+    display:flex;
+    align-items:center;
+}
+
+.toolbox-cont > *{
+    margin-left:4rem;
+}
+
+.toolbox-priority-cont{
+    height:3.5rem;
+    width: 30%;
+    background-color:#dfe6e9;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.action-btn-cont{
+    height:3.5rem;
+    width: 8rem;
+    background-color: lightpink;
+    display:flex;
+}
+
+.action-btn-cont > *{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50%;
+    font-size:2rem;
+}
+
+.add-btn:hover{
+    background-color:grey;
+}
+
+.remove-btn:hover{
+    background-color:grey;
+    /* color:white; */
+}
+
+.color{
+    height: 2rem;
+    width:3rem;
+    background-color: #ff7675;
+    /* border-radius:10px; */
+}
+
+.lightpink{
+    background-color: #ff7675;
+}
+
+.lightgreen{
+    background-color: #55efc4;
+}
+
+.lightblue{
+    background-color: #74b9ff;
+}
+
+.black{
+    background-color: #2d3436;
+}
+
+/* Main Container begins here */
+
+.modal-cont{
+    height:50vh;
+    width:45vw;
+    background:lightblue;
+    /* document ke flow se bhar ane ke liye absolute liya hai */
+    position:absolute; 
+    /* top:10rem; 
+    we can do this by changin values find center for our modal but it would be only for the 
+    single viewport, It's not going to be center for the other viewports such as moble, so in order to make 
+    it dynamic we will use calc() function*/
+    top:calc( (100vh - 50vh) / 2);
+    left:calc((100vw - 45vw) / 2);
+    display:none;
+}
+
+
+
+.textarea-cont{
+    height: 100%;
+    width:75%;
+    border:none;
+    outline:none;
+    background-color:#dfe6e9;
+    resize:none;
+    padding:2rem;
+    font-size:1.5rem;
+}
+
+.priority-colors-cont{
+    height:100%;
+    width:25%;
+    background-color:#636e72;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.priority-color{
+    height:3rem;
+    width:55%;
+    /* background-color:lightpink; */
+}
+
+
+.border{
+    border:1px solid red;
+}
+
+.main-cont{
+    display:flex;
+    flex-wrap:wrap;
+    padding:2rem;
+    gap:2rem;
+    justify-content: center;
+}
+
+.ticket-cont {
+    height:10rem;
+    width:16rem;
+    background-color:red;
+}
+
+.ticket-color{
+    height:1rem;
+    background-color:lightpink;
+}
+.ticket-id{
+    height:2rem;
+    background-color:#dfe6e9;
+    padding:0.4rem;
+}
+
+.task-area{
+    /* height:1rem; */
+    height:calc( 100% - 1rem - 2rem);
+    background-color:#dfe6e9;
+    padding:0.4rem;
+
+}
