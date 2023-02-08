@@ -7,7 +7,7 @@ body{
     padding:0;
 }
 
-.toolbox-cont{
+.toolbox-cont {
     height: 5rem;
     /* width:  */
     background-color: #636e72;
@@ -135,14 +135,14 @@ body{
 }
 
 .ticket-cont {
-    height:10rem;
+    height:14rem;
     width:16rem;
-    background-color:red;
+    background-color:#dfe6e9
 }
 
 .ticket-color{
     height:1rem;
-    background-color:lightpink;
+    /* background-color:lightpink; */
 }
 .ticket-id{
     height:2rem;
@@ -152,8 +152,18 @@ body{
 
 .task-area{
     /* height:1rem; */
-    height:calc( 100% - 1rem - 2rem);
+    height:calc( 100% - 1rem - 2rem - 2rem);
     background-color:#dfe6e9;
     padding:0.4rem;
 
+}
+
+.ticket-lock{
+    height:2rem; /*isko 1 rem karke dekh*/
+    /* background-color:lightblue; */
+    display:flex;
+    font-size:1.5rem;
+    padding-right:1rem;
+    justify-content:flex-end;
+    color:  grey;
 }

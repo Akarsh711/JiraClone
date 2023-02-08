@@ -1,8 +1,26 @@
 let addBTn = document.querySelector(".add-btn");
 let modalCont = document.querySelector(".modal-cont")
 let mainCont = document.querySelector(".main-cont");
-let textareaCont = document.querySelector(".textarea-cont");
+let textAreaCont = document.querySelector(".textarea-cont");
+
+let allPriorityColors = document.querySelectorAll(".priority-color");
+let colors = ["lightpink", "lightblue", "lightgreen", "black"];
+let modalPriorityColor = colors[colors.length-1];
+
 let addFlag = false;
+
+// Listener for modal priority coloring
+allPriorityColors.forEach((colorElem, idx) => {
+    colorElem.addEventListener("click", (e)=> {
+        allPriorityColors.forEach((priorityColorElem, idx) =>{
+            priorityColorElem.classList.remove("border");
+        })
+
+        colorElem.classList.add("border");
+        
+        modalPriorityColor = colorElem.classList[0];
+    })
+})
 
 addBTn.addEventListener("click", (e) =>{
     //Display Modal
@@ -21,23 +39,22 @@ addBTn.addEventListener("click", (e) =>{
 modalCont.addEventListener("keydown", (e) =>{
     let key = e.key;
     if(key === "Shift"){
+        // funciton shortid() is coming from shortid-dist package in form of cdn
+        createTicket(modalPriorityColor, textAreaCont.value, shortid());
         modalCont.style.display = "None";
         addFlag = false;
-        textareaCont.value = "";
-        createTicket();
+        textAreaCont.value = "";
     }
     
 });
 
-function createTicket(){
+function createTicket(ticketColor, ticketTask, ticketID){
     let ticketCont = document.createElement("div");
     ticketCont.setAttribute("class", "ticket-cont");
     ticketCont.innerHTML = `
-        <div class="ticket-color"></div>
-        <div class="ticket-id">Sample_id</div>
-        <div class="task-area">
-            bis perspiciatis earum. Illum facilis facere soluta architecto obcaecati ab mollitia possimus quam!
-        </div>
+        <div class="ticket-color ${ticketColor}"></div>
+        <div class="ticket-id">#${ticketID}</div>
+        <div class="task-area">${ticketTask}</div>
         `;
 
     mainCont.appendChild(ticketCont);

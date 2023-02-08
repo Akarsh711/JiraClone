@@ -1,0 +1,13 @@
+Modal Functionality:
+    Priority colors
+    Task id
+
+Ticket Functionality:
+    Priority color
+    Handle Lock
+    Handle Removal 
+
+Filtering:
+    Toolbox Color Priority Filtering:
+        Single Click -> Ticket fillter
+        Double Click -> Display all
